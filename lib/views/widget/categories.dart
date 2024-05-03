@@ -7,6 +7,7 @@ class Categories extends StatefulWidget {
   @override
   State<Categories> createState() => _CategoriesState();
 }
+
 List<Map> categories = [
   {
     "icons": "assets/images/pic2.webp",
@@ -39,6 +40,7 @@ List<Map> categories = [
     'course': 14,
   },
 ];
+
 class _CategoriesState extends State<Categories> {
   @override
   Widget build(BuildContext context) {
@@ -55,8 +57,15 @@ class _CategoriesState extends State<Categories> {
       itemBuilder: (context, index) {
         final data = categories[index];
         return GestureDetector(
-          onTap: (){
-            Navigator.push(context, MaterialPageRoute(builder: (context) => CourseDetails(courseName:"${data['name']}" , courseNumber: data['course']),));
+          onTap: () {
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => CourseDetails(
+                    courseName: "${data['name']}",
+                    courseHour: data['course'],
+                  ),
+                ));
           },
           child: Container(
             padding: const EdgeInsets.all(15),
@@ -74,13 +83,13 @@ class _CategoriesState extends State<Categories> {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Align(  alignment: AlignmentDirectional.center,
+                Align(
+                  alignment: AlignmentDirectional.center,
                   child: Image(
                     image: AssetImage(data["icons"]),
                     width: 100,
                     height: 100,
                   ),
-
                 ),
                 Text(
                   data['name'],
