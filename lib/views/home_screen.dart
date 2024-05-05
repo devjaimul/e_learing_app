@@ -30,7 +30,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          "Exploree Categories",
+                          "Explore Categories",
                           style: TextStyle(
                               fontWeight: FontWeight.w700, fontSize: 20),
                         ),
