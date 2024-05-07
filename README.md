@@ -2,6 +2,8 @@
 
 A new Flutter project.
 
+App video link: https://youtu.be/SE4jMKvTsfI?si=Vxgxstp3zHpoH9r1
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
